@@ -10,6 +10,10 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
+    "react-simple-maps": "^3.0.0",
+    "react-tsparticles": "^2.12.2",
+    "recharts": "^2.15.2",
+    "tsparticles": "^3.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

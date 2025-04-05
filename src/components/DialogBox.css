@@ -1,0 +1,260 @@
+/* .dialog-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+  }
+  
+  .dialog-header {
+    background: #90ee90;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .dialog-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-box {
+    background: #c8ffc8;
+    padding: 10px;
+    width: 45%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+   /* .dialog-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: #f0f0f0;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #a3d9a5;
+    border-radius: 8px;
+    background: #e8ffe8;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #67c967;
+    background: #d0ffd0;
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* .dialog-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: #f0f0f0;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+
+
+  .dialog-header {
+    background: #90ee90;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+
+
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 14px;
+    font-size: 18px;
+    border: 2px solid #a3d9a5;
+    border-radius: 8px;
+    background: #e8ffe8;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #67c967;
+    background: #d0ffd0;
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+   .dialog-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: #f0f0f0;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 14px;
+    font-size: 18px;
+    border: 2px solid #a3d9a5;
+    border-radius: 8px;
+    background: #e8ffe8;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #67c967;
+    background: #d0ffd0;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .next-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  
