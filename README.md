@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# GuardianNet 🛡️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**GuardianNet** is an AI-powered, privacy-preserving **Intrusion Detection System (IDS)** that leverages machine learning to detect malicious network activity, logs these alerts **immutably on the blockchain**, and offers a real-time dashboard for users to monitor suspicious behavior. It combines **decentralized security**, **AI detection**, and **privacy-focused architecture** for next-gen cyber defense.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Features
 
-### `npm start`
+- ✅ **Real-time Threat Detection** using AI models (Autoencoders/LSTMs)
+- 🔒 **Immutable Logging** of alerts on the Ethereum blockchain via smart contracts
+- 📈 **Dashboard** showing all alerts, including blocked malicious IPs
+- 👁️ **Filter malicious logs** and view their actions
+- 🌐 **MetaMask Integration** for secure authentication and transactions
+- 🧠 Designed with **Federated Learning/Homomorphic Encryption** in mind for future privacy enhancements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧱 Tech Stack
 
-### `npm test`
+| Layer         | Tech Used                                                                 |
+|---------------|---------------------------------------------------------------------------|
+| Frontend      | React.js, Ethers.js, MetaMask, CSS                                        |
+| Backend       | Flask (for AI model), Node (optional future extensions)                   |
+| Blockchain    | Solidity, Hardhat, Ethers.js, Ethereum Local Network                      |
+| ML Model      | Autoencoder / LSTM (PyTorch), trained on network traffic data             |
+| Security      | Federated Learning (planned), Homomorphic Encryption (planned)            |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/GuardianNet.git
+   cd GuardianNet
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Frontend Dependencies**
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run Hardhat Node (Local Blockchain)**
+   ```bash
+   npx hardhat node
+   ```
 
-### `npm run eject`
+4. **Deploy Smart Contract**
+   ```bash
+   npx hardhat run scripts/deploy.js --network localhost
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Start Frontend**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Connect MetaMask**
+   - Switch MetaMask network to `localhost:8545`
+   - Import an account using the private key from Hardhat
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📜 Smart Contract (Solidity)
 
-## Learn More
+- **Contract Name**: `GuardianNet`
+- **Functions**:
+  - `logAlert(string category, string severity, string description)`: Logs a new alert
+  - `getAllAlerts()`: Fetches all alerts
+- **Data Stored**:
+  - `id`: Unique alert ID
+  - `category`: e.g., Malicious, Suspicious
+  - `severity`: e.g., High, Medium, Low
+  - `description`: Details of the event
+  - `timestamp`: UNIX timestamp (block time)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All logs are permanently recorded on-chain, creating an immutable audit trail.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🖥️ Frontend Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Uses `Ethers.js` to:
+  - Connect with MetaMask via `BrowserProvider`
+  - Fetch `signer` and interact with the deployed smart contract
+  - Call `getAllAlerts()` to fetch alert logs
+- Displays:
+  - **All Logs** (dummy + fetched)
+  - **Malicious Logs** filtered from alert severity or type
+  - **Blocked IP Table** from hardcoded blacklist
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧠 AI Intrusion Detection (Planned/Prototype)
 
-### Making a Progressive Web App
+- The IDS is trained on labeled network traffic using:
+  - **Autoencoders** for anomaly detection
+  - **LSTM-based models** for sequential threat patterns
+- These models will eventually send logs to the smart contract in real-time using a Flask API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🔐 Privacy-Preserving Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 🧩 **Federated Learning**: Model training occurs locally, no data leaves the device
+- 🔐 **Homomorphic Encryption**: Future plans to allow encrypted traffic to be analyzed without decryption
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📸 Screenshots
 
-### `npm run build` fails to minify
+| Dashboard | Malicious Logs |
+|----------|----------------|
+| ![Dashboard](screenshots/dashboard.png) | ![Malicious Logs](screenshots/malicious.png) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🚀 Future Enhancements
+
+- ✅ Integrate Flask backend for real-time alerts from ML models
+- ✅ Add UI for contract deployment on testnets (Goerli/Polygon)
+- ⏳ Live model performance graph
+- ⏳ Alert notification system
+- ⏳ Decentralized frontend hosting (e.g., IPFS + ENS)
+
+---
+
+## 🤝 Contributing
+
+Pull requests and feedback are welcome! For major changes, please open an issue first.
+
+---
+
+## 📝 License
+
+MIT © 2025 GuardianNet Team
+
+---
+
+## 📬 Contact
+
+For demo requests or collaborations, contact:  
+**Email**: guardiannet.dev@protonmail.com  
+**LinkedIn**: [YourName](https://linkedin.com/in/yourprofile)
